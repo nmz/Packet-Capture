@@ -1,0 +1,27 @@
+-------------
+Prerequisites
+-------------
+gcc
+libpcap
+
+-------------
+Introduction
+-------------
+This is a C program which lists all the devices found on the machine
+and from that you can select which interface needs to be monitored.
+Also you can filter out the packet depending on the type (ip,tcp,.etc).
+The filtered packets will be dumped to a file which is given by the 
+user.
+
+------------------
+compiling the code
+------------------
+gcc -lpcap sniff.c -o sniffer
+
+-------------------
+executing the code
+-------------------
+./sniffer ip dump.pcap
+
+ip - filter expression
+dump.pcap - The file to which packets have to be saved
